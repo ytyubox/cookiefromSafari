@@ -1,4 +1,5 @@
 import Vapor
+import Authentication
 
 /// Called before your application initializes.
 ///
@@ -14,4 +15,9 @@ public func configure(
     services.register(router, as: Router.self)
 
     // Configure the rest of your application here
+    config.prefer(MemoryKeyedCache.self, for: KeyedCache.self)
+    var middlewares = MiddlewareConfig()
+    middlewares.use(SessionsMiddleware.self)
+    // ...
+    services.register(middlewares)
 }

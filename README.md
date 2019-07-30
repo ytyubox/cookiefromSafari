@@ -1,15 +1,7 @@
-# Vapor Clean
+# Flow
 
-This is a template for Vapor 3 users that does the absolute minimum to set up a working Vapor 3 environment.
-
-Unlike the official templates that are currently available, this template does not include vast swathes of extra example code that you will always need to delete. Instead, it adds just a single “hello” route so you can be sure everything is working correctly.
-
-Although this repository contains a LICENSE file, this is meant for you to replace with whatever license you intend to use – please consider what little code is in this repository as public domain, and yours to do with as you please.
-
-It’s my hope that the official Vapor project will add a template similar to this one at some point in the future, but until then please use this however you want.
-
-## Try it out
-
-If you have already installed the Vapor toolbox, you can create a new Vapor project from this repo using the following command:
-
-    vapor new MyProject --template=twostraws/vapor-clean
+1. SafariViewController 訪問 URL
+2. 設定 info.plist::URL types::URL Schemes:: ytyuboxcookietry
+3. URL redirect 至 app scheme "ytyuboxcookietry://" + _COOKIE_
+4. func application(_ app:, open url:, options:) 中的 URL 可拿到 step 3. 的 URL
+5. SafariViewControllerDelegate, remove SafariViewController
